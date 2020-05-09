@@ -3,16 +3,42 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style1.css" />
-    <title>Caleb Quiz App</title>
+    <title>CALEB QUIZ APP</title>
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <div class="container">
-      <div id="home" class="flex-center flex-column">
-        <h1>CALEB QUIZ APP</h1>
+    <div class="quiz-container">
+      <div class="question-number">
+        <h3>
+          Question <span class="question-num-value"></span> of
+          <span class="total-question"></span>
+        </h3>
+      </div>
+      <div class="question"></div>
+      <div class="options">
+        <div id="0" class="option1" onclick="check(this)"></div>
+        <div id="1" class="option2" onclick="check(this)"></div>
+        <div id="2" class="option3" onclick="check(this)"></div>
+        <div id="3" class="option4" onclick="check(this)"></div>
+        <div id="4" class="option5" onclick="check(this)"></div>
+      </div>
+      <div class="button">
+        <button type="button" class="btn" onclick="next()">Next</button>
+      </div>
+      <div class="answer-tracker"></div>
 
-        <a href="./game.html" class="btn">Start Game</a>
+      <div class="quiz-over">
+        <div class="box">
+          <h1>
+            You Got <span class="correct-answers"></span> out of
+            <span class="totalQuestion2"></span> Questions Correct!!!. <br />
+            That is <span class="percentage"></span>
+          </h1>
+          <button type="button" onclick="tryAgain()">Try Again</button>
+        </div>
       </div>
     </div>
+
+    <script src="./js/index.js"></script>
   </body>
 </html>
